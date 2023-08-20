@@ -6,24 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-.form {
-  text-align: center;
-}
-
-.fieldset {
-  background-color: #99B4BF;
-  border: 5px solid #BF8D30;
-  border-radius: 20px / 10px;
-}
-
-/*container*/
-
-.container {
-  max-width: 700px;
-  padding: 0 20px;
-  margin: 20px auto;
-}
-
 body {
   background-image: url("../public/images/currencyBackground.png");
   background-position: auto;
