@@ -1,4 +1,6 @@
 import Input from "./Input";
+import Select from "./Select";
+import {Label, Legend} from "./FieldSetCaptions";
 
 function App() {
    return (
@@ -8,23 +10,13 @@ function App() {
 
             <fieldset className="fieldset">
 
-               <legend className="fieldset__legend">
-                  Kalkulator walut
-               </legend>
+               <Legend innerText={"Kalkulator walut"}/>
 
                <p className="fieldset__paragraph">
 
-                  <label>
-                     <span className="fieldset__labelText">
-                        Waluta początkowa:
-                     </span>
-                  </label>
+                  <Label innerText={"Waluta początkowa:"} />
 
-                  <select className="fieldset__field" name="firstCurrency">
-                     <option selected value="EUR">Euro</option>
-                     <option value="USD">Dolar</option>
-                     <option value="PLN">Złoty</option>
-                  </select>
+                  <Select name={"firstCurrency"} selectedOne={"true"}/>
 
                   <Input type={"number"} min={"0"} autofocus={"true"} value={"1"} step={"any"} />
                </p>
@@ -35,17 +27,9 @@ function App() {
 
                <p className="fieldset__paragraph">
 
-                  <label>
-                     <span className="fieldset__labelText">
-                        Waluta końcowa:
-                     </span>
-                  </label>
+                  <Label innerText={"Waluta końcowa:"}/>
 
-                  <select className="fieldset__field" name="secondCurrency">
-                     <option value="EUR">Euro</option>
-                     <option value="USD">Dolar</option>
-                     <option selected value="PLN">Złoty</option>
-                  </select>
+                  <Select name={"secoundCurrency"} selectTwo={"true"}/>
 
                   <Input readonly={"true"} type={"number"} />
                </p>
