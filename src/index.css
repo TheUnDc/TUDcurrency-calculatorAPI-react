@@ -30,15 +30,6 @@ html {
   border-radius: 20px / 10px;
 }
 
-.fieldset__legend {
-  border: 5px solid #BF8D30;
-  background-color:#BF8D30;
-  color:#253C59;
-  border-radius: 20px / 10px;
-  padding: 3px;
-  text-align:left;
-}
-
 .buttons__swap {
   width: 50%;
   margin-top: 10px;

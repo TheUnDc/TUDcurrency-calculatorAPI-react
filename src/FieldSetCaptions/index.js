@@ -9,7 +9,7 @@ const Label = ({innerText}) => (
 );
 
 const Legend = ({innerText}) => (
-    <legend className="fieldset__legend">
+    <legend className="caption__legend">
         {innerText}
     </legend>
 );
