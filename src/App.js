@@ -1,64 +1,63 @@
-
+import Input from "./Input";
 
 function App() {
-  return (
-    <main className="container">
+   return (
+      <main className="container">
 
-      <form method="post" className="form">
+         <form method="post" className="form">
 
-        <fieldset className="fieldset">
+            <fieldset className="fieldset">
 
-          <legend className="fieldset__legend">
-            Kalkulator walut
-          </legend>
+               <legend className="fieldset__legend">
+                  Kalkulator walut
+               </legend>
 
-          <p className="paragraph__margin">
+               <p className="fieldset__paragraph">
 
-            <label>
-              <span className="form__labelText">
-                Waluta początkowa:
-              </span>
-            </label>
+                  <label>
+                     <span className="fieldset__labelText">
+                        Waluta początkowa:
+                     </span>
+                  </label>
 
-            <select className="form__field" name="firstCurrency">
-              <option selected value="EUR">Euro</option>
-              <option value="USD">Dolar</option>
-              <option value="PLN">Złoty</option>
-            </select>
+                  <select className="fieldset__field" name="firstCurrency">
+                     <option selected value="EUR">Euro</option>
+                     <option value="USD">Dolar</option>
+                     <option value="PLN">Złoty</option>
+                  </select>
 
-            <input className="form__field" type="number" min="0" autofocus name="waluta" value="1"
-              step="any" />
-          </p>
+                  <Input type={"number"} min={"0"} autofocus={"true"} value={"1"} step={"any"} />
+               </p>
 
-          <button type="button" className="swap__button">
-            ⮀ SWAP ⮀
-          </button>
+               <button type="button" className="buttons__swap">
+                  ⮀ SWAP ⮀
+               </button>
 
-          <p className="paragraph__margin">
+               <p className="fieldset__paragraph">
 
-            <label>
-              <span className="form__labelText">
-                Waluta końcowa:
-              </span>
-            </label>
+                  <label>
+                     <span className="fieldset__labelText">
+                        Waluta końcowa:
+                     </span>
+                  </label>
 
-            <select className="form__field" name="secondCurrency">
-              <option value="EUR">Euro</option>
-              <option value="USD">Dolar</option>
-              <option selected value="PLN">Złoty</option>
-            </select>
+                  <select className="fieldset__field" name="secondCurrency">
+                     <option value="EUR">Euro</option>
+                     <option value="USD">Dolar</option>
+                     <option selected value="PLN">Złoty</option>
+                  </select>
 
-            <input readonly className="form__field" type="text" />
-          </p>
+                  <Input readonly={"true"} type={"number"} />
+               </p>
 
-          <p>
-            <button className="form__button">&#128425 Przelicz &#128425</button>
-          </p>
+               
+               <button className="buttons__submit">Przelicz</button>
+               
 
-        </fieldset>
-      </form>
-    </main>
-  )
+            </fieldset>
+         </form>
+      </main>
+   )
 };
 
 export default App;
