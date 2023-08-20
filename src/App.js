@@ -1,6 +1,7 @@
 import Input from "./Input";
 import Select from "./Select";
 import {Label, Legend} from "./FieldSetCaptions";
+import Buttons from "./Button";
 
 function App() {
    return (
@@ -18,9 +19,7 @@ function App() {
                   <Input type={"number"} min={"0"} autofocus={"true"} value={"1"} step={"any"} />
                </p>
 
-               <button type="button" className="buttons__swap">
-                  ⮀ SWAP ⮀
-               </button>
+               <Buttons type={"button"} className={"buttons__swap"} label={"⮀ SWAP ⮀"}/>
 
                <p className="fieldset__paragraph">
                   <Label innerText={"Waluta końcowa:"}/>
@@ -29,7 +28,7 @@ function App() {
                   <Input readonly={"true"} type={"number"} />
                </p>
 
-               <button className="buttons__submit">Przelicz</button>
+               <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"}/>
                
             </fieldset>
          </form>

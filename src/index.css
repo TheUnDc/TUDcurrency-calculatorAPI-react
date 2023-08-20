@@ -6,20 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-.buttons__submit {
-  width: 100%;
-  margin: 10px 0 5px 0;
-  padding: 5px;
-  background-color: #253C59;
-  color: white;
-  border-radius: 20px / 40px;
-  border: none;
-}
-.buttons__submit:hover {
-  background-color: #4b7ab4;
-  color: white;
-}
-
 .form {
   text-align: center;
 }
@@ -30,15 +16,6 @@ html {
   border-radius: 20px / 10px;
 }
 
-.buttons__swap {
-  width: 50%;
-  margin-top: 10px;
-  padding: 5px;
-  background-color: #436d9f;
-  color: white;
-  border-radius: 20px / 40px;
-  border: none;
-}
 /*container*/
 
 .container {
