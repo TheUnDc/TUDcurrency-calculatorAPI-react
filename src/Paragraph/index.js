@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Paragraph = ({children}) => (
+const Paragraph = (props) => (
     <p className="paragraph">
-        {children}
+        {props.children}
     </p>
 );
 

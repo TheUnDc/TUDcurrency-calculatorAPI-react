@@ -3,13 +3,14 @@ import Select from "./Select";
 import {Label, Legend} from "./FieldSetCaptions";
 import Buttons from "./Button";
 import Paragraph from "./Paragraph";
+import Container from "./Container";
 
 function App() {
    return (
       <main className="container">
          <form method="post" className="form">
-
             <fieldset className="fieldset">
+
                <Legend innerText={"Kalkulator walut"}/>
 
                <Paragraph>
@@ -28,9 +29,9 @@ function App() {
                   <Input readonly={true} type={"number"} />
                </Paragraph>
 
-               <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"}/> 
-            </fieldset>
+               <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"}/>
 
+            </fieldset>
          </form>
       </main>
    )
