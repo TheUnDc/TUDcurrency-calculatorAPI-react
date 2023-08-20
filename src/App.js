@@ -14,8 +14,8 @@ function App() {
                <p className="fieldset__paragraph">
                   <Label innerText={"Waluta początkowa:"} />
 
-                  <Select name={"firstCurrency"} selectedOne={"true"}/>
-                  <Input type={"number"} min={"0"} autofocus={"true"} value={"1"} step={"any"} />
+                  <Select name={"firstCurrency"} selectedOne={true}/>
+                  <Input type={"number"} min={"0"} autofocus={true} value={"1"} step={"any"} />
                </p>
 
                <Buttons type={"button"} className={"buttons__swap"} label={"⮀ SWAP ⮀"}/>
@@ -23,8 +23,8 @@ function App() {
                <p className="fieldset__paragraph">
                   <Label innerText={"Waluta końcowa:"}/>
 
-                  <Select name={"secoundCurrency"} selectTwo={"true"}/>
-                  <Input readonly={"true"} type={"number"} />
+                  <Select name={"secoundCurrency"} selectTwo={true}/>
+                  <Input readonly={true} type={"number"} />
                </p>
 
                <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"}/> 

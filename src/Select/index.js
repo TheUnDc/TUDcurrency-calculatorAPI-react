@@ -2,9 +2,9 @@ import "./style.css";
 
 const Select = ({name, selectedOne, selectedTwo}) => (
     <select className="select__field" name={name}>
-        <option selected={selectedOne} value="EUR">Euro</option>
+        <option defaultValue={selectedOne} value="EUR">Euro</option>
         <option value="USD">Dolar</option>
-        <option selected={selectedTwo} value="PLN">Złoty</option>
+        <option defaultValue={selectedTwo} value="PLN">Złoty</option>
     </select>
 );
 
