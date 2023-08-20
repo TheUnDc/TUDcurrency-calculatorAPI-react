@@ -6,7 +6,6 @@ import Buttons from "./Button";
 function App() {
    return (
       <main className="container">
-
          <form method="post" className="form">
 
             <fieldset className="fieldset">
@@ -28,9 +27,9 @@ function App() {
                   <Input readonly={"true"} type={"number"} />
                </p>
 
-               <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"}/>
-               
+               <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"}/> 
             </fieldset>
+
          </form>
       </main>
    )
