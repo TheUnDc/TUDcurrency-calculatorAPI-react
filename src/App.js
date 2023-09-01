@@ -1,32 +1,56 @@
-import Input from "./Input";
 import Select from "./Select";
 import { Label, Legend } from "./FieldSetCaptions";
 import Buttons from "./Button";
-import Paragraph from "./Paragraph";
 import Container from "./Container";
+import Form from "./Form";
+import { useState } from "react";
 
 function App() {
+
+   const [firstInputContent, setFirstInputContent] = useState("1");
+   const [secondInputContent, setSecondInputContent] = useState("4");
+
+   
+   const firstInputValue = ({ target }) => {
+      setFirstInputContent(target.value);
+      console.log(target.value);
+   };
+
+   const secondInputValue = ({ target }) => {
+      setSecondInputContent(target.value);
+      console.log(target.value);
+   };
+
+
+   const swapCurrency = () => {
+      setFirstInputContent(secondInputContent)
+      setSecondInputContent(firstInputContent)
+
+   };
+
    return (
       <Container>
-         <Legend innerText={"Kalkulator walut"} />
+         <Form>
+            <Legend innerText={"Kalkulator walut"} />
 
-         <Paragraph>
-            <Label innerText={"Waluta początkowa:"} />
+            <p className="paragraph">
+               <Label innerText={"Waluta początkowa:"} />
 
-            <Select name={"firstCurrency"} selectedOne={true} />
-            <Input type={"number"} min={"0"} autofocus={true} value={"1"} step={"any"} />
-         </Paragraph>
+               <Select name={"firstCurrency"} selectedOne={true} />
+               <input type={"number"} min={"0"} autoFocus={true} step={"any"} onChange={firstInputValue} value={(firstInputContent)} />
+            </p>
 
-         <Buttons type={"button"} className={"buttons__swap"} label={"⮀ SWAP ⮀"} />
+            <Buttons type={"button"} className={"buttons__swap"} label={"⮀ SWAP ⮀"} onClick={swapCurrency} />
 
-         <Paragraph>
-            <Label innerText={"Waluta końcowa:"} />
+            <p className="paragraph">
+               <Label innerText={"Waluta końcowa:"} />
 
-            <Select name={"secoundCurrency"} selectTwo={true} />
-            <Input readonly={true} type={"number"} />
-         </Paragraph>
+               <Select name={"secoundCurrency"} selectTwo={true} />
+               <input readOnly type={"number"} onChange={secondInputValue} value={(secondInputContent)} />
+            </p>
 
-         <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"} />
+            <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"} />
+         </Form>
       </Container>
    )
 };
