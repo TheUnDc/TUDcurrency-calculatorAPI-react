@@ -6,9 +6,3 @@ const Input = (props) => (
 ); 
 
 export default Input
-
-// <input readonly type="text" />
-// <input  type="number" min="0" autofocus name="waluta" value="1" step="any" />
-
-//<input className="fieldset__field" type="number" min="0" autofocus name="waluta" value="1" step="any" />
-//<input readonly className="fieldset__field" type="text" />
