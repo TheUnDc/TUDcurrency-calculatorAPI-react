@@ -10,28 +10,34 @@ function App() {
    const [firstInputContent, setFirstInputContent] = useState(1);
    const [secondInputContent, setSecondInputContent] = useState("");
 
+   const handleInputChange = ({ target }) => {
+      setFirstInputContent(target.value);
+   };
+
+   const [selectedFirstCurrency, setSelectedFirstCurrency] = useState("EUR");
+   const [selectedSecondCurrency, setSelectedSecondCurrency] = useState("PLN");
+
+   const handleFirstSelectChange = ({ target }) => {
+      setSelectedFirstCurrency(target.value);
+   };
+   const handleSecondSelectChange = ({ target }) => {
+      setSelectedSecondCurrency(target.value);
+   };
+
+
    const swapCurrency = () => {
       setFirstInputContent(secondInputContent)
       setSecondInputContent(firstInputContent)
 
    };
 
-   const handleInputChange = (props) => {
-      setFirstInputContent(props.target.value);
-   };
-
    const calculateCurrency = (event) => {
       event.preventDefault()
 
-      // const first = {firstSelected};
-      // const second = {secondSelected};
+      const first = selectedFirstCurrency;
+      const second = selectedSecondCurrency;
       const writedAmount = firstInputContent;
-      console.log(writedAmount)
-      const first = "EUR";
-      const second = "USD";
-
       let result
-      // const fullResult = result.toFixed(2)
 
       const eurUsd = 1.9; //usdEur (1/1.9)
       const eurPln = 4.4; //plnEur (1/4.4)
@@ -66,7 +72,9 @@ function App() {
             result = (1) * (writedAmount)
 
       }
-      setSecondInputContent(result)
+
+      const finalResult = result.toFixed(2)
+      setSecondInputContent(finalResult)
    }
 
    return (
@@ -77,7 +85,7 @@ function App() {
             <p className="paragraph">
                <Label innerText={"Waluta początkowa:"} />
 
-               <Select name={"firstCurrency"} />
+               <Select name={"firstCurrency"} selectedValue={selectedFirstCurrency} selectChange={handleFirstSelectChange} />
                <input type={"number"} min={"0"} autoFocus={true} step={"any"} value={(firstInputContent)} onChange={handleInputChange} />
             </p>
 
@@ -86,8 +94,8 @@ function App() {
             <p className="paragraph">
                <Label innerText={"Waluta końcowa:"} />
 
-               <Select name={"secoundCurrency"} selectTwo={true} />
-               <input type={"number"} value={(secondInputContent)} />
+               <Select name={"secoundCurrency"} selectedValue={selectedSecondCurrency} selectChange={handleSecondSelectChange} />
+               <input readOnly type={"number"} value={(secondInputContent)} />
             </p>
 
             <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"} />
