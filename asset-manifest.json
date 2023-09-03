@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/TUDcurrency-calculator-react/static/css/main.07bc4df9.css",
-    "main.js": "/TUDcurrency-calculator-react/static/js/main.ad2d4d11.js",
+    "main.js": "/TUDcurrency-calculator-react/static/js/main.d9deff8e.js",
     "static/js/787.9929fef6.chunk.js": "/TUDcurrency-calculator-react/static/js/787.9929fef6.chunk.js",
     "static/media/currencyBackground.png": "/TUDcurrency-calculator-react/static/media/currencyBackground.b1d2851dc00557f62942.png",
     "index.html": "/TUDcurrency-calculator-react/index.html",
     "main.07bc4df9.css.map": "/TUDcurrency-calculator-react/static/css/main.07bc4df9.css.map",
-    "main.ad2d4d11.js.map": "/TUDcurrency-calculator-react/static/js/main.ad2d4d11.js.map",
+    "main.d9deff8e.js.map": "/TUDcurrency-calculator-react/static/js/main.d9deff8e.js.map",
     "787.9929fef6.chunk.js.map": "/TUDcurrency-calculator-react/static/js/787.9929fef6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07bc4df9.css",
-    "static/js/main.ad2d4d11.js"
+    "static/js/main.d9deff8e.js"
   ]
 }
