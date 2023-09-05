@@ -1,43 +1,56 @@
 # TUDcurrencyCalculator Przelicznik Walut
 
-This project was bootstrapped with 
+This project was bootstrapped with
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 ## This is the old version of calculator! Now you can check my upgraded version based on free API (vanilla js for now) ! Link in Other Version.
-## [TUDcurrencalculator-react  link](https://theundc.github.io/TUDcurrency-calculator-react/)
+
+## [TUDcurrencalculator-react link](https://theundc.github.io/TUDcurrency-calculator-react/)
 
 ## Welcome to the World of money
 
-Are you tired of calculate currency by your own? Try my Currencycalculator! 
+Are you tired of calculate currency by your own? Try my Currencycalculator!
 You can check now how much foreign currency you can buy for the selected amount not only a PLN but any other currenrency
 like:
 
 ![](public/images/currencyGifX.gif)
 
 Supported currencies:
-- Euro
-- US Dollar
-- Zloty
-- and more!!!! (in API version).
 
-Swap currency button make counting even more pleasant! (except for design style from 2010) 
+-   Euro
+-   US Dollar
+-   Zloty
+-   and more!!!! (in API version).
+
+Swap currency button make counting even more pleasant! (except for design style from 2010)
 
 To make this beautifull program i used super advanced technologies like:
 
 Used technology:
-- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-- ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
-- Lobotomy (ouch)
+
+-   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+-   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+-   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+-   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+-   ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
+-   Lobotomy (ouch)
+
+Tools:
+
+-   ![Edge](https://img.shields.io/badge/Edge-0078D7?style=for-the-badge&logo=Microsoft-edge&logoColor=white)
+-   ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+-   ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+-   ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 Yess! You recived this magnificent tool for freee! (i recived spine pain and headache after the lobotomy).
+
 ## Other Version
-- This is the old version of calculator! Now you can check my upgraded version based on free API!
-[CurrencalculatorAPI link](https://github.com/TheUnDc/TUDcurrencyCalculatorAPI)
+
+-   This is the old version of calculator! Now you can check my upgraded version based on free API!
+    [CurrencalculatorAPI link](https://github.com/TheUnDc/TUDcurrencyCalculatorAPI)
 
 ### Sorry for lame jokes.
+
 ## Available Scripts
 
 In the project directory, you can run:
