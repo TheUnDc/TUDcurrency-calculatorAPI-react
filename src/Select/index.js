@@ -9,13 +9,3 @@ const Select = ({name, selectChange, selectedValue,}) => (
 );
 
 export default Select;
-
-/*
-const Select = ({name, onChange, value}) => (
-    <select className="select__field" name={name} onChange={onChange} value={value}>
-        <option value="EUR">Euro</option>
-        <option value="USD">Dolar</option>
-        <option value="PLN">Złoty</option>
-    </select>
-);
-*/
