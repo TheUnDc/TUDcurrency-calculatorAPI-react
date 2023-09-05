@@ -1,7 +1,43 @@
-# Getting Started with Create React App
+# TUDcurrencyCalculator Przelicznik Walut
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
+## This is the old version of calculator! Now you can check my upgraded version based on free API (vanilla js for now) ! Link in Other Version.
+## [TUDcurrencalculator-react  link](https://theundc.github.io/TUDcurrency-calculator-react/)
+
+## Welcome to the World of money
+
+Are you tired of calculate currency by your own? Try my Currencycalculator! 
+You can check now how much foreign currency you can buy for the selected amount not only a PLN but any other currenrency
+like:
+
+![](public/images/currencyGifX.gif)
+
+Supported currencies:
+- Euro
+- US Dollar
+- Zloty
+- and more!!!! (in API version).
+
+Swap currency button make counting even more pleasant! (except for design style from 2010) 
+
+To make this beautifull program i used super advanced technologies like:
+
+Used technology:
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+- ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
+- Lobotomy (ouch)
+
+Yess! You recived this magnificent tool for freee! (i recived spine pain and headache after the lobotomy).
+## Other Version
+- This is the old version of calculator! Now you can check my upgraded version based on free API!
+[CurrencalculatorAPI link](https://github.com/TheUnDc/TUDcurrencyCalculatorAPI)
+
+### Sorry for lame jokes.
 ## Available Scripts
 
 In the project directory, you can run:
@@ -13,11 +49,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
