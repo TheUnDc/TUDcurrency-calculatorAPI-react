@@ -5,7 +5,6 @@ import Buttons from "./Button";
 import Container from "./Container";
 import Form from "./Form";
 import { useState } from "react";
-import Input from "./Input";
 
 function App() {
 
@@ -88,7 +87,7 @@ function App() {
                <Label innerText={"Waluta początkowa:"} />
 
                <Select name={"firstCurrency"} selectedValue={selectedFirstCurrency} selectChange={handleFirstSelectChange} />
-               <Input type={"number"} min={"0"} autoFocus={true} step={"any"} value={(firstInputContent)} onChange={handleInputChange} />
+               <input className="input" type={"number"} min={"0"} autoFocus={true} step={"any"} value={(firstInputContent)} onChange={handleInputChange} />
             </p>
 
             <Buttons type={"button"} className={"buttons__swap"} label={"⮀ SWAP ⮀"} onClick={swapCurrency} />
@@ -97,7 +96,7 @@ function App() {
                <Label innerText={"Waluta końcowa:"} />
 
                <Select name={"secoundCurrency"} selectedValue={selectedSecondCurrency} selectChange={handleSecondSelectChange} />
-               <Input readOnly type={"number"} value={(secondInputContent)} />
+               <input className="input" readOnly type={"number"} value={(secondInputContent)} />
             </p>
 
             <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"} />
