@@ -13,7 +13,7 @@ Are you tired of calculate currency by your own? Try my Currencycalculator!
 You can check now how much foreign currency you can buy for the selected amount not only a PLN but any other currenrency
 like:
 
-![](public/images/currencyGifX.gif)
+![](public/images/screen.png)
 
 Supported currencies:
 
@@ -41,6 +41,8 @@ Tools:
 -   ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 -   ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 -   ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+![](public/images/currencyGifX.gif)
 
 Yess! You recived this magnificent tool for freee! (i recived spine pain and headache after the lobotomy).
 
