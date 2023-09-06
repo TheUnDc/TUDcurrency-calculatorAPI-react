@@ -1,5 +1,6 @@
 import Select from "./Select";
-import { Label, Legend } from "./FieldSetCaptions";
+import Label from "./Label";
+import Legend from "./Legend";
 import Buttons from "./Button";
 import Container from "./Container";
 import Form from "./Form";
