@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   background-image: url("../public/images/currencyBackground.png");
   background-position: auto;
   background-size: cover;

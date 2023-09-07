@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Buttons = ({type, label, className, onChange, onClick}) => (
+const Buttons = ({ type, label, className, onChange, onClick }) => (
     <button
         type={type}
         className={className}
