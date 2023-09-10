@@ -5,8 +5,10 @@ import Buttons from "./Button";
 import Container from "./Container";
 import Form from "./Form";
 import { useState } from "react";
+import DateClock from "./DateClock";
 
 function App() {
+
 
    const [firstInputContent, setFirstInputContent] = useState(1);
    const [secondInputContent, setSecondInputContent] = useState("");
@@ -82,6 +84,8 @@ function App() {
       <Container>
          <Form onSubmit={calculateCurrency}>
             <Legend innerText={"Kalkulator walut"} />
+
+            <DateClock />
 
             <p className="paragraph">
                <Label innerText={"Waluta początkowa:"} />
