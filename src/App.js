@@ -5,7 +5,7 @@ import Buttons from "./Button";
 import Container from "./Container";
 import Form from "./Form";
 import { useState } from "react";
-import DateClock from "./DateClock";
+import Clock from "./Clock";
 
 function App() {
 
@@ -85,7 +85,7 @@ function App() {
          <Form onSubmit={calculateCurrency}>
             <Legend innerText={"Kalkulator walut"} />
 
-            <DateClock />
+            <Clock />
 
             <p className="paragraph">
                <Label innerText={"Waluta początkowa:"} />

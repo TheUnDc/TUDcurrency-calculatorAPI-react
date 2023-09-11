@@ -1,20 +1,20 @@
 import "./style.css";
 import { useState, useEffect } from "react";
 
-const DateClock = () => {
+const Clock = () => {
 
-    const [dateClock, setDateClock] = useState(new Date());
+    const [clock, setClock] = useState(new Date());
 
-    const updateDateClock = () => {
-        setDateClock(new Date())
+    const updateClock = () => {
+        setClock(new Date())
     };
 
     useEffect(() => {
-        const timeReloader = setInterval(updateDateClock, 1000);
+        const timeReloader = setInterval(updateClock, 1000);
         return () => clearInterval(timeReloader);
     }, []);
 
-    const displayDateTime = dateClock.toLocaleDateString
+    const displayDateTime = clock.toLocaleDateString
         (undefined,
             {
                 weekday: "long",
@@ -28,10 +28,10 @@ const DateClock = () => {
         );
 
     return (
-        <span className="component_dateClock">
+        <span className="clock">
             Dzisiaj jest {displayDateTime}
         </span>
     )
 };
 
-export default DateClock;
+export default Clock;
