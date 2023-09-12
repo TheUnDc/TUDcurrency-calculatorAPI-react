@@ -1,4 +1,4 @@
-import "./style.css";
+import { ClockWrapper } from "./styled";
 import { useCurrentDate } from "../useCurrentDate";
 
 const Clock = () => {
@@ -6,9 +6,9 @@ const Clock = () => {
     const displayDateTime = useCurrentDate();
 
     return (
-        <span className="clock">
+        <ClockWrapper className="clock">
             Dzisiaj jest {displayDateTime}
-        </span>
+        </ClockWrapper>
     )
 };
 
