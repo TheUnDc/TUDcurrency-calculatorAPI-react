@@ -1,10 +1,8 @@
-import "./style.css";
-// import styled from "styled-components";
 
 const Buttons = ({ type, label, className, onChange, onClick }) => (
     <button
-        type={type}
         className={className}
+        type={type}
         onChange={onChange}
         onClick={onClick}
     >
@@ -12,4 +10,6 @@ const Buttons = ({ type, label, className, onChange, onClick }) => (
     </button>
 );
 
-export default Buttons;
+/*mam watpliwosci czy component Button tak powinien wyladac */
+
+export  {Buttons};

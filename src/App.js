@@ -1,7 +1,8 @@
 import Select from "./Select";
 import Label from "./Label";
 import Legend from "./Legend";
-import Buttons from "./Button";
+import { Buttons } from "./Button/index";
+import {ButtonSwapStyled, ButtonSubmitStyled} from "./Button/styled";
 import Container from "./Container";
 import Form from "./Form";
 import { useState } from "react";
@@ -102,7 +103,7 @@ function App() {
                />
             </p>
 
-            <Buttons type={"button"} className={"buttons__swap"} label={"⮀ SWAP ⮀"} onClick={swapCurrency} />
+            <ButtonSwapStyled as={Buttons} type={"button"} label={"⮀ SWAP ⮀"} onClick={swapCurrency} />
 
             <p className="paragraph">
                <Label innerText={"Waluta końcowa:"} />
@@ -115,7 +116,7 @@ function App() {
                />
             </p>
 
-            <Buttons type={"submit"} className={"buttons__submit"} label={"Przelicz"} />
+            <ButtonSubmitStyled as={Buttons} type={"submit"} label={"🖩 Przelicz 🖩"} />
          </Form>
       </Container>
    )
