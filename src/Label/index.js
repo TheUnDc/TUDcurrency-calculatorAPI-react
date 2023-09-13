@@ -1,10 +1,10 @@
-import "./style.css";
+import { LabelWrapper } from "./styled";
 
 const Label = ({innerText}) => (
     <label>
-        <span className="caption__label">
+        <LabelWrapper>
             {innerText}
-        </span>
+        </LabelWrapper>
     </label>
 );
 
