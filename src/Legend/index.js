@@ -1,9 +1,9 @@
-import "./style.css";
+import { LegendWrapper } from "./styled";
 
 const Legend = ({innerText}) => (
-    <legend className="caption__legend">
+    <LegendWrapper>
         {innerText}
-    </legend>
+    </LegendWrapper>
 );
 
 export default Legend;
