@@ -1,11 +1,11 @@
-import "./style.css";
+import { FormWrapper, FieldsetWrapper } from "./styled";
 
 const Form = ({ children, onSubmit }) => (
-    <form method="post" className="form" onSubmit={onSubmit}>
-        <fieldset className="from__fieldset">
+    <FormWrapper method="post" className="form" onSubmit={onSubmit}>
+        <FieldsetWrapper className="from__fieldset">
             {children}
-        </fieldset>
-    </form>
+        </FieldsetWrapper>
+    </FormWrapper>
 );
 
 export default Form;
