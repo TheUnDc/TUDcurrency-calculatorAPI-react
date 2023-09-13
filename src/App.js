@@ -7,6 +7,7 @@ import Container from "./Container";
 import Form from "./Form";
 import { useState } from "react";
 import Clock from "./Clock";
+import { Paragraph, InputS } from "./GlobalCss";
 
 function App() {
 
@@ -88,11 +89,11 @@ function App() {
 
             <Clock />
 
-            <p className="paragraph">
+            <Paragraph>
                <Label innerText={"Waluta początkowa:"} />
 
                <Select name={"firstCurrency"} selectedValue={selectedFirstCurrency} selectChange={handleFirstSelectChange} />
-               <input
+               <InputS
                   className="input"
                   type={"number"}
                   min={"0"}
@@ -101,20 +102,20 @@ function App() {
                   value={(firstInputContent)}
                   onChange={handleInputChange}
                />
-            </p>
+            </Paragraph>
 
             <ButtonSwapStyled as={Buttons} type={"button"} label={"⮀ SWAP ⮀"} onClick={swapCurrency} />
 
-            <p className="paragraph">
+            <Paragraph>
                <Label innerText={"Waluta końcowa:"} />
 
                <Select name={"secoundCurrency"} selectedValue={selectedSecondCurrency} selectChange={handleSecondSelectChange} />
-               <input
+               <InputS
                   className="input"
                   readOnly type={"number"}
                   value={(secondInputContent)}
                />
-            </p>
+            </Paragraph>
 
             <ButtonSubmitStyled as={Buttons} type={"submit"} label={"🖩 Przelicz 🖩"} />
          </Form>
