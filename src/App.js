@@ -7,7 +7,7 @@ import Container from "./Container";
 import Form from "./Form";
 import { useState } from "react";
 import Clock from "./Clock";
-import { Paragraph, InputS } from "./GlobalCss";
+import { Paragraph, InputS } from "./StyledApp.js";
 
 function App() {
 

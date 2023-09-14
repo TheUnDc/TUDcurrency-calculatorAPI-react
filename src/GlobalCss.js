@@ -1,16 +1,5 @@
-import { styled, createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import background from "./img/currencyBackground.png";
-
-export const InputS = styled.input`
-    margin: 0 5px;
-    padding: 2px;
-    border: none;
-    background-color:#ffffffaa;
-`;
-
-export const Paragraph = styled.p`
-    margin: 0;
-`;
 
 export const GlobalStylee = createGlobalStyle`
 
