@@ -1,8 +1,11 @@
 import { FormWrapper, FieldsetWrapper } from "./styled";
 
 const Form = ({ children, onSubmit }) => (
-    <FormWrapper method="post" className="form" onSubmit={onSubmit}>
-        <FieldsetWrapper className="from__fieldset">
+    <FormWrapper 
+        method="post" 
+        onSubmit={onSubmit}
+    >
+        <FieldsetWrapper>
             {children}
         </FieldsetWrapper>
     </FormWrapper>

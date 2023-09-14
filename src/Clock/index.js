@@ -19,7 +19,7 @@ const Clock = () => {
     );
 
     return (
-        <ClockWrapper className="clock">
+        <ClockWrapper>
             Dzisiaj jest {displayDateTime}
         </ClockWrapper>
     )
