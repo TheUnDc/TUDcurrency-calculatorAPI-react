@@ -74,7 +74,11 @@ function App() {
             <Paragraph>
                <Label innerText={"Waluta początkowa:"} />
 
-               <Select name={"firstCurrency"} selectedValue={selectedInput} selectChange={({ target }) => { setSelectedInput(target.value); }} />
+               <Select 
+                  name={"firstCurrency"} 
+                  selectedValue={selectedInput} 
+                  selectChange={({ target }) => { setSelectedInput(target.value); }} 
+               />
                <InputS
                   className="input"
                   type={"number"}
@@ -86,12 +90,20 @@ function App() {
                />
             </Paragraph>
 
-            <ButtonSwapStyled as={Buttons} type={"button"} label={"⮀ SWAP ⮀"} onClick={swapCurrency} />
+            <ButtonSwapStyled 
+               as={Buttons} 
+               type={"button"} 
+               label={"⮀ SWAP ⮀"} 
+               onClick={swapCurrency} />
 
             <Paragraph>
                <Label innerText={"Waluta końcowa:"} />
 
-               <Select name={"secoundCurrency"} selectedValue={selectedOutput} selectChange={({ target }) => { setSelectedOutput(target.value) }} />
+               <Select 
+                  name={"secoundCurrency"} 
+                  selectedValue={selectedOutput} 
+                  selectChange={({ target }) => { setSelectedOutput(target.value) }} 
+               />
                <InputS
                   className="input"
                   readOnly type={"number"}
@@ -99,7 +111,11 @@ function App() {
                />
             </Paragraph>
 
-            <ButtonSubmitStyled as={Buttons} type={"submit"} label={"🖩 Przelicz 🖩"} />
+            <ButtonSubmitStyled 
+               as={Buttons} 
+               type={"submit"} 
+               label={"🖩 Przelicz 🖩"} 
+            />
          </Form>
       </Container>
    )
