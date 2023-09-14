@@ -30,7 +30,7 @@ function App() {
       const eurPln = 4.4; //plnEur (1/4.4)
       const usdPln = 4.6; //plnUsd (1/4.6)
 
-      let exchangeRate = (1); 
+      let exchangeRate = 1; 
 
       switch (true) {
          case selectedInput === "EUR" && selectedOutput === "USD":
@@ -56,6 +56,8 @@ function App() {
          case selectedInput === "PLN" && selectedOutput === "USD":
             exchangeRate = (1 / usdPln);
             break;
+
+         default:;
       }
 
       const result = (exchangeRate) * (input);
