@@ -8,6 +8,7 @@ import Form from "./Form";
 import { useState } from "react";
 import Clock from "./Clock";
 import { Paragraph, InputS } from "./StyledApp.js";
+import { useRate } from "./useRate";
 
 function App() {
 
@@ -18,50 +19,32 @@ function App() {
    const [selectedInput, setSelectedInput] = useState("EUR");
    const [selectedOutput, setSelectedOutput] = useState("PLN");
 
+   const [apiData, downloadData] = useRate();
+
+   const [date, setDate] = useState()
+   const uberDate = (new Date(date*1000)).toLocaleDateString();
+
    const swapCurrency = () => {
       setInput(output);
       setOutput(input);
    };
 
-   const calculateCurrency = (event) => {
-      event.preventDefault()
 
-      const eurUsd = 1.9; //usdEur (1/1.9)
-      const eurPln = 4.4; //plnEur (1/4.4)
-      const usdPln = 4.6; //plnUsd (1/4.6)
+   const calculateCurrency = async (event) => {
+      event.preventDefault();
 
-      let exchangeRate = 1; 
+      await downloadData();
+      console.warn({apiData: apiData});
+      // fetch(`https://open.er-api.com/v6/latest/${selectedInput}`)
+      //    .then(Response => (Response.json()))
+      //    .then(data => {
+      //       let result = (data.rates[`${selectedOutput}`]) * (input)
+      //       console.log(data)
+      //       let innerDate = data.time_last_update_unix
+      //       setDate(innerDate)
+      //       setOutput(result.toFixed(2))
+      //    })
 
-      switch (true) {
-         case selectedInput === "EUR" && selectedOutput === "USD":
-            exchangeRate = (eurUsd);
-            break;
-
-         case selectedInput === "USD" && selectedOutput === "EUR":
-            exchangeRate = (1 / eurUsd);
-            break;
-
-         case selectedInput === "EUR" && selectedOutput === "PLN":
-            exchangeRate = (eurPln);
-            break;
-
-         case selectedInput === "PLN" && selectedOutput === "EUR":
-            exchangeRate = (1 / eurPln);
-            break;
-
-         case selectedInput === "USD" && selectedOutput === "PLN":
-            exchangeRate = (usdPln);
-            break;
-
-         case selectedInput === "PLN" && selectedOutput === "USD":
-            exchangeRate = (1 / usdPln);
-            break;
-
-         default:;
-      }
-
-      const result = (exchangeRate) * (input);
-      setOutput(result.toFixed(2))
    }
 
    return (
@@ -74,10 +57,10 @@ function App() {
             <Paragraph>
                <Label innerText={"Waluta początkowa:"} />
 
-               <Select 
-                  name={"firstCurrency"} 
-                  selectedValue={selectedInput} 
-                  selectChange={({ target }) => { setSelectedInput(target.value); }} 
+               <Select
+                  name={"firstCurrency"}
+                  selectedValue={selectedInput}
+                  selectChange={({ target }) => { setSelectedInput(target.value); }}
                />
                <InputS
                   className="input"
@@ -90,19 +73,19 @@ function App() {
                />
             </Paragraph>
 
-            <ButtonSwapStyled 
-               as={Buttons} 
-               type={"button"} 
-               label={"⮀ SWAP ⮀"} 
+            <ButtonSwapStyled
+               as={Buttons}
+               type={"button"}
+               label={"⮀ SWAP ⮀"}
                onClick={swapCurrency} />
 
             <Paragraph>
                <Label innerText={"Waluta końcowa:"} />
 
-               <Select 
-                  name={"secoundCurrency"} 
-                  selectedValue={selectedOutput} 
-                  selectChange={({ target }) => { setSelectedOutput(target.value) }} 
+               <Select
+                  name={"secoundCurrency"}
+                  selectedValue={selectedOutput}
+                  selectChange={({ target }) => { setSelectedOutput(target.value) }}
                />
                <InputS
                   className="input"
@@ -111,11 +94,12 @@ function App() {
                />
             </Paragraph>
 
-            <ButtonSubmitStyled 
-               as={Buttons} 
-               type={"submit"} 
-               label={"🖩 Przelicz 🖩"} 
+            <ButtonSubmitStyled
+               as={Buttons}
+               type={"submit"}
+               label={"🖩 Przelicz 🖩"}
             />
+            <span> Waluty są: aktualne na dzień {uberDate} </span>
          </Form>
       </Container>
    )
