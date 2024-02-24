@@ -12,7 +12,6 @@ import { useRate } from "./useRate";
 
 function App() {
 
-
    const [input, setInput] = useState(1);
    const [output, setOutput] = useState("");
 
@@ -21,8 +20,8 @@ function App() {
 
    const [apiData, downloadData] = useRate();
 
-   const [date, setDate] = useState()
-   const uberDate = (new Date(date*1000)).toLocaleDateString();
+   const [date, setDate] = useState();
+   const uberDate = (new Date(date * 1000)).toLocaleDateString();
 
    const swapCurrency = () => {
       setInput(output);
@@ -34,16 +33,15 @@ function App() {
       event.preventDefault();
 
       await downloadData();
-      console.warn({apiData: apiData});
-      // fetch(`https://open.er-api.com/v6/latest/${selectedInput}`)
-      //    .then(Response => (Response.json()))
-      //    .then(data => {
-      //       let result = (data.rates[`${selectedOutput}`]) * (input)
-      //       console.log(data)
-      //       let innerDate = data.time_last_update_unix
-      //       setDate(innerDate)
-      //       setOutput(result.toFixed(2))
-      //    })
+      console.warn({ apiData: apiData });
+      fetch(`https://open.er-api.com/v6/latest/${selectedInput}`)
+         .then(Response => (Response.json()))
+         .then(data => {
+            let result = (data.rates[`${selectedOutput}`]) * (input)
+            let innerDate = data.time_last_update_unix
+            setDate(innerDate)
+            setOutput(result.toFixed(2))
+         })
 
    }
 

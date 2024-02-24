@@ -7,7 +7,6 @@ export const useRate = () => {
 
     const downloadData = async () => {
         try {
-            console.error("PRZED CALLEM")
             const response = await axios.get(`https://open.er-api.com/v6/latest/EUR`)
                 .then(response => console.log(response.data));
             const data = response.json();
