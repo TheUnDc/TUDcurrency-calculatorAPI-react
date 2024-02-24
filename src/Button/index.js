@@ -10,6 +10,5 @@ const Buttons = ({ type, label, className, onChange, onClick }) => (
     </button>
 );
 
-/*mam watpliwosci czy component Button tak powinien wyladac */
 
 export  {Buttons};

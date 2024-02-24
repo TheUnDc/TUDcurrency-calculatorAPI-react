@@ -8,7 +8,7 @@ import Form from "./Form";
 import { useState } from "react";
 import Clock from "./Clock";
 import { Paragraph, InputS } from "./StyledApp.js";
-import { useRate } from "./useRate";
+// import { useRate } from "./useRate";
 
 function App() {
 
@@ -18,10 +18,11 @@ function App() {
    const [selectedInput, setSelectedInput] = useState("EUR");
    const [selectedOutput, setSelectedOutput] = useState("PLN");
 
-   const [apiData, downloadData] = useRate();
+   // const [apiData, downloadData] = useRate();
 
    const [date, setDate] = useState();
    const uberDate = (new Date(date * 1000)).toLocaleDateString();
+   const [errorLoad, setErrorLoad] = useState();
 
    const swapCurrency = () => {
       setInput(output);
@@ -32,8 +33,8 @@ function App() {
    const calculateCurrency = async (event) => {
       event.preventDefault();
 
-      await downloadData();
-      console.warn({ apiData: apiData });
+      // await downloadData();
+
       fetch(`https://open.er-api.com/v6/latest/${selectedInput}`)
          .then(Response => (Response.json()))
          .then(data => {
@@ -41,6 +42,13 @@ function App() {
             let innerDate = data.time_last_update_unix
             setDate(innerDate)
             setOutput(result.toFixed(2))
+            console.log(data);
+            setErrorLoad();
+         })
+         .catch(error => {
+            console.error(error);
+            setOutput(NaN);
+            setErrorLoad("Wysąpił błąd sieci przy pobieraniu zawartości. Spróbój później.")
          })
 
    }
@@ -97,7 +105,8 @@ function App() {
                type={"submit"}
                label={"🖩 Przelicz 🖩"}
             />
-            <span> Waluty są: aktualne na dzień {uberDate} </span>
+            <span> Wyliczenie jest aktualne na dzień {uberDate} </span>
+            <div style={{color:"red"}} >{errorLoad}</div>
          </Form>
       </Container>
    )

@@ -23,6 +23,5 @@ export const useRate = () => {
         };
     };
 
-    console.error({downloadData: downloadData});
     return ([apiData, downloadData])
 };
